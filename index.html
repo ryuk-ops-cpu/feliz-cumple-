@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+
+.container{
+  max-width:90%;
+}
+
+button{
+  padding:12px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+  background:#ff4da6;
+  color:white;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+img{
+  max-width:90%;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+.hidden{
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="step1">
+<h1>🎂 Feliz cumpleaños</h1>
+<button onclick="nextStep(2)">Presionar aquí</button>
+</div>
+
+<div id="step2" class="hidden">
+<img src="imagen1.jpg">
+<p>✨</p>
+<button onclick="nextStep(3)">Continuar</button>
+</div>
+
+<div id="step3" class="hidden">
+<img src="imagen2.jpg">
+<p>💫</p>
+<button onclick="nextStep(4)">Siguiente</button>
+</div>
+
+<div id="step4" class="hidden">
+<img src="imagen3.jpg">
+<p>🎉</p>
+<button onclick="nextStep(5)">Una más</button>
+</div>
+
+<div id="step5" class="hidden">
+<img src="imagen4.jpg">
+<h2>🎂 Feliz cumpleaños</h2>
+</div>
+
+</div>
+
+<script>
+function nextStep(step){
+  for(let i=1;i<=5;i++){
+    let el=document.getElementById("step"+i);
+    if(el) el.classList.add("hidden");
+  }
+  document.getElementById("step"+step).classList.remove("hidden");
+}
+</script>
+
+</body>
+  </html>
+  
